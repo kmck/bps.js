@@ -1,0 +1,48 @@
+{
+  "name": "bps.js",
+  "version": "0.0.1",
+  "description": "BPS patching utility",
+  "keywords": [
+    "bps",
+    "beat",
+    "patch",
+    "rom"
+  ],
+  "main": "lib/bps.js",
+  "author": "Keith McKnight <keith@mcknig.ht>",
+  "license": "ISC",
+  "scripts": {
+    "build": "rm -rf lib && babel src -d lib",
+    "start": "babel src -w -d lib",
+    "lint": "eslint src",
+    "test": "jest src"
+  },
+  "bin": {
+    "bps": "lib/cli.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "crc-hash": "^0.2.2",
+    "minimist": "^1.2.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^23.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest-cli": "^23.3.0"
+  },
+  "files": [
+    "lib"
+  ]
+}
